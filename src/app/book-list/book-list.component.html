@@ -1,0 +1,9 @@
+@for (eachBook of bookList; track eachBook.key){
+    <div>
+        <a [routerLink]="['/book-details', eachBook.key]"> {{ eachBook.title }} </a>
+        @if (eachBook.covers && eachBook.covers[0]!="-1") {
+            <img src="{{'https://covers.openlibrary.org/b/id/'+eachBook.covers[0]+'-M.jpg'}}" alt="Cover Image">
+        }
+        
+    </div>
+}
